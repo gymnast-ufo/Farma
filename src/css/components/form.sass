@@ -1,0 +1,81 @@
+.form
+	display: flex
+	flex-flow: column nowrap
+
+	&__block
+		display: flex
+		flex-flow: column nowrap
+		position: relative
+		margin-bottom: 16px
+
+		&:last-child
+			margin-bottom: 0
+
+		&--confirm
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+
+			*
+				@media (min-width: 992px)
+					width: 50%
+					justify-content: flex-start
+
+		&--extend
+			margin-bottom: 24px
+
+	&__notification
+		display: inline-flex
+		max-height: 0
+		transition: max-height 0.3s ease-out
+		overflow: hidden
+
+		&__text
+			display: inline-block
+			padding-top: 2px
+			padding-left: 25px
+
+	&__checkbox
+		position: relative
+		padding-left: 66px
+		font-size: 12px
+		font-weight: normal
+		cursor: pointer
+
+		@media (min-width: 992px)
+			padding-left: 80px
+			font-size: 14px
+			letter-spacing: -0.2px
+
+		&:before, &:after
+			content: ''
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 50%
+			left: 25px
+			border-width: 1px
+			border-style: solid
+			border-color: transparent
+			transform: translateY(-50%)
+
+		&:before
+			border-radius: 3px
+			background-color: #daf0f8
+
+		&:after
+			content: '✔'
+			display: none
+			color: #ffffff
+
+		&__link
+			text-decoration: underline
+			display: inline
+			color: inherit !important
+
+	&__ready
+		font-size: 22px
+		font-weight: 600

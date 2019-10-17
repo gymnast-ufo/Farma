@@ -1,0 +1,84 @@
+.button
+	display: inline-block
+	position: relative
+	padding: 18px 35px 17px
+	border-radius: 100px
+	color: #ffffff !important
+	text-decoration: none
+	text-align: center
+	letter-spacing: 0.06em
+	cursor: pointer
+	z-index: 1
+	white-space: nowrap
+
+	&:active
+		box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+	
+	&--small
+		padding: 10px 24px 11px
+
+		@media (min-width: 768px)
+			padding: 7px 24px 6px
+
+	&--big
+		width: 225px
+
+	&--green
+		background-color: #91c03c
+
+	&--blue
+		background-color: #0551ab
+
+	&--dark-blue
+		background-color: #2d58a0
+
+	&--big-border
+
+		&:before,
+		&:after
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			margin: auto
+			transform: scale(1)
+			transform-origin: 50% 50%
+			background-color: inherit
+			border-radius: inherit
+
+		&:before
+			z-index: -1
+			opacity: 0.4
+
+		&:after
+			z-index: -2
+			opacity: 0.2
+
+		&:hover
+
+			&:before
+				width: 81.57%
+				transform: scale(1.42)
+
+			&:after
+				width: 71.61%
+				transform: scale(1.842)
+		
+		&--animate
+
+			&:before
+				animation: pulsingBefore 2.5s ease-out infinite
+
+			&:after
+				animation: pulsingAfter 2.5s ease-out infinite
+
+			&:hover
+
+				&:before,
+				&:after
+					animation: none

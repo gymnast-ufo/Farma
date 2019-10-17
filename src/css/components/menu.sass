@@ -1,0 +1,92 @@
+.menu
+	display: flex
+	height: 100vh
+	width: 84.44%
+	position: absolute
+	top: 0
+	left: -13px
+	border-right: 2px solid #91c03c
+	transform: translateX(-100%)
+	transition: transform 0.3s ease-out
+	background-image: linear-gradient(to bottom, #0063a3, #96defc)
+	box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.24), 0 0 16px 0 rgba(0, 0, 0, 0.18)
+	z-index: 10
+	overflow: auto
+
+	@media (min-width: 768px)
+		width: 70%
+
+	@media (min-width: 992px)
+		flex-direction: row
+		align-items: stretch
+		width: auto
+		height: auto
+		position: relative
+		padding: 0
+		border-right: none
+		transform: none
+		background: none
+		box-shadow: none
+
+	&__container
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		justify-content: space-between
+		height: 100vh
+		width: 100%
+		position: relative
+		padding-top: 35px
+		padding-right: 16px
+		padding-bottom: 40px
+
+		@media (min-width: 992px)
+			flex-direction: row
+			align-items: stretch
+			height: auto
+			padding: 0
+
+	&__wrapper
+		display: flex
+		flex-wrap: nowrap
+		flex-direction: column
+
+		@media (min-width: 992px)
+			flex-direction: row
+			justify-content: center
+			width: 100%
+
+	&__item
+		justify-content: center
+		padding: 16px
+		border-top-right-radius: 10px
+		border-bottom-right-radius: 10px
+		white-space: nowrap
+		font-size: 18px
+		color: inherit
+
+		@media (min-width: 992px)
+			padding: 10px
+			padding-top: 28px !important
+			padding-bottom: 20px !important
+			border-top-right-radius: 0
+			border-bottom-right-radius: 10px
+			border-bottom-left-radius: 10px
+			font-size: inherit
+
+		@media (min-width: 1200px)
+			padding: 16px
+
+		&:hover,
+		&--active
+			background-color: #0551ab
+
+		&--main
+			font-size: 21px
+
+			@media (min-width: 992px)
+				display: none !important
+
+	&--open
+		display: flex
+		transform: translateX(0%)

@@ -1,0 +1,65 @@
+.contacts
+	display: flex
+	flex-flow: column nowrap
+	padding-top: 40px
+
+	@media (min-width: 992px)
+		padding-top: 80px
+
+	&__container
+		margin-bottom: 40px
+
+		@media (min-width: 992px)
+			margin-bottom: 120px
+
+	&__block
+		display: flex
+		flex-flow: column nowrap
+		height: 100%
+
+	&__info
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(5, auto) 1fr
+		align-items: end
+
+	&__header
+		margin-bottom: 10px
+
+		@media (min-width: 992px)
+			margin-bottom: 24px
+
+	&__about
+		margin-bottom: 24px
+		line-height: 1.33
+
+		@media (min-width: 992px)
+			line-height: 1.67
+
+	&__element
+		margin-bottom: 0.8em
+		font-size: 20px
+		font-weight: 600
+		letter-spacing: 0.6px
+
+		@media (min-width: 992px)
+			font-size: 24px
+
+	&__faq
+		display: inline-flex
+		flex-flow: row nowrap
+		align-items: flex-end
+		margin-top: 10px
+		margin-bottom: 40px
+
+		@media (min-width: 768px)
+			margin-top: 18px
+			margin-bottom: 16px
+
+		&__link
+			display: inline-flex
+			flex-flow: row nowrap
+			align-items: center
+
+			&:before
+				border-color: #243269

@@ -1,0 +1,38 @@
+.recommendations
+	display: flex
+	flex-flow: column nowrap
+	align-items: center
+	padding-top: 40px
+	padding-bottom: 40px
+	overflow: hidden
+
+	@media (min-width: 992px)
+		padding-top: 75px
+		padding-bottom: 130px
+
+	&__container
+
+		@media (min-width: 768px) and (max-width: 991px)
+			width: 100%
+
+	&__header
+		margin-bottom: 1em
+
+		@media (min-width: 992px)
+			margin-bottom: 0.6em
+
+	&__slider-row
+		margin-bottom: 16px
+
+		@media (min-width: 992px)
+			margin-bottom: 6.6rem
+
+	&__more
+		display: flex
+		flex-flow: row nowrap
+		justify-content: center
+		align-items: center
+
+		@media (min-width: 992px)
+			display: none
+			margin-top: 30px

@@ -1,0 +1,89 @@
+.hole-bird
+	display: inline-flex
+	position: relative
+
+	&__message
+		display: inline-flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: center
+		height: 123px
+		width: 156px
+		position: absolute
+		padding: 25px
+		background-image: url('/build/img/bird-message.svg')
+		background-size: 100% 100%
+		transform: scale(0)
+		color: #243269
+		text-align: center
+		font-weight: 600
+		font-size: 12px
+
+		@media (min-width: 992px)
+			width: 216px
+			height: 170px
+			padding: 30px 25px
+			font-size: 16px
+
+		&--animating
+			animation: showMessage 0.3s ease-out
+
+		&--active
+			transform: scale(1)
+
+		&--big
+			font-size: 10px
+
+			@media (min-width: 992px)
+				width: 250px
+				height: 180px
+				padding: 35px 40px
+
+		&--to-left
+			top: -75px
+			left: -170px
+
+			@media (min-width: 992px)
+				top: -100px
+				left: -175px
+
+		&--to-right
+			top: -80px
+			left: 170px
+
+			@media (min-width: 992px)
+				top: -42px
+				left: 297px
+
+		&--rtl
+			transform: scaleX(0) scaleY(0)
+
+			&--animating
+				animation: showMessageRtl 0.3s ease-out
+
+			&--active
+				transform: scaleX(-1) scaleY(1)
+
+			span
+				transform: scaleX(-1) scaleY(1)
+
+	&__bird
+		display: inline-flex
+		flex-flow: row nowrap
+		height: 142px
+		width: 156px
+		background-repeat: no-repeat
+		background-size: auto
+		background-position: 50% 50%
+		z-index: 1
+
+		@media (min-width: 992px)
+			height: 262px
+			width: 288px
+		
+		&--to-left
+			background-image: url('/build/img/bird--small-left.svg')
+
+		&--to-right
+			margin-top: -10px
+			background-image: url('/build/img/bird--small-right.svg')

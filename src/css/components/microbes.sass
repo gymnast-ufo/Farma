@@ -1,0 +1,230 @@
+.microbe
+	display: inline-block
+	position: absolute
+	transform: translate(-50%, -50%) scale(1)
+	cursor: url('/build/img/pill.png'), pointer
+	animation-duration: 16s
+	animation-timing-function: linear
+	animation-iteration-count: infinite
+	z-index: 4
+
+	&--inactive
+		visibility: hidden
+
+	&__message
+		display: none
+		flex-flow: row nowrap
+		width: 100%
+		padding: 20px 5px
+		position: absolute
+		border: 1px solid #0063a3
+		border-radius: 5px
+		background-color: #ffffff
+		transition: transform 0.3s ease-out
+
+		&:before,
+		&:after
+			content: ''
+			display: inline-flex
+			width: 0
+			height: 0
+			position: absolute
+
+		&--active
+			display: inline-flex
+			animation: showMessage 0.3s ease-out
+
+		&--to-top
+			top: -10%
+			border-top-left-radius: 5px !important
+			border-top-right-radius: 5px !important
+			border-bottom-left-radius: 0
+			border-bottom-right-radius: 0
+			transform: translateY(-100%) scale(0)
+
+			&:before,
+			&:after
+				transform: translateY(100%)
+
+			&:before
+				bottom: -1px
+				border-top: 17px solid #0063a3
+
+			&:after
+				bottom: 0
+				border-top: 15px solid #ffffff
+
+		&--to-bottom
+			bottom: -10%
+			border-top-left-radius: 0
+			border-top-right-radius: 0
+			border-bottom-left-radius: 5px !important
+			border-bottom-right-radius: 5px !important
+			transform: translateY(100%) scale(0)
+
+			&:before,
+			&:after
+				transform: translateY(-100%)
+
+			&:before
+				top: -1px
+				border-bottom: 17px solid #0063a3
+
+			&:after
+				top: 0
+				border-bottom: 15px solid #ffffff
+
+		&--to-left
+			right: 50%
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+			border-top-left-radius: 5px !important
+			border-bottom-left-radius: 5px !important
+
+			&:before
+				right: -1px
+				border-left: 16px solid transparent
+
+			&:after
+				right: 0
+				border-left: 15px solid transparent
+
+		&--to-right
+			left: 50%
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			border-top-right-radius: 5px !important
+			border-bottom-right-radius: 5px !important
+
+			&:before
+				left: -1px
+				border-right: 16px solid transparent
+
+			&:after
+				left: 0
+				border-right: 15px solid transparent
+
+	&__body
+		display: inline-block
+		width: 100%
+		height: 100%
+		position: relative
+		background-size: contain
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		transform: scale(1)
+		transition: transform 0.3s ease-out
+		z-index: 2
+
+		&--animate
+			animation: microbeBody 16s linear infinite
+
+		@for $i from 1 through 6
+			&--#{$i}
+				background-image: url('/build/img/microbe-#{$i}.png')
+
+		&--hide
+			animation: showMessage 0.2s ease-in reverse
+
+	&__bang
+		display: inline-flex
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 50%
+		left: 50%
+		opacity: 1
+		transform: translate(-50%, -50%) scale(0)
+		transform-origin: 50% 50%
+		transition: transform 0.1s ease-out, opacity 1.3s linear 0.4s
+		background-color: gray
+		z-index: 3
+
+		&--active
+			opacity: 0
+			transform: translate(-50%, -50%) scale(1)
+	
+	@for $i from 1 through 5
+		&--animate-#{$i}
+			animation-name: microbe-#{$i}
+	
+	&--position
+
+		&--1
+			top: 2.5%
+			left: 85vw
+
+			@media (min-width: 992px)
+				left: 56vw
+
+		&--2
+			top: 4%
+			left: 67vw
+
+			@media (min-width: 992px)
+				top: 3.5%
+				left: 48vw
+
+		&--3
+			top: 7.4%
+			left: 18vw
+
+			@media (min-width: 992px)
+				top: 8.5%
+				left: 35vw
+
+		&--4
+			top: 35%
+			left: 85vw
+
+			@media (min-width: 992px)
+				top: 4%
+				left: 75vw
+
+		&--5
+			top: 35.3%
+			left: 66vw
+
+			@media (min-width: 992px)
+				top: 17%
+				left: 44vw
+
+		&--6
+			top: 39%
+			left: 14vw
+
+			@media (min-width: 992px)
+				top: 24.2%
+				left: 79vw
+
+		&--7
+			display: none
+
+			@media (min-width: 992px)
+				display: inline-block
+				top: 32.6%
+				left: 20vw
+
+		&--8
+			display: none
+
+			@media (min-width: 992px)
+				display: inline-block
+				top: 36%
+				left: 47vw
+
+		&--9
+			display: none
+
+			@media (min-width: 992px)
+				display: inline-block
+				top: 37.5%
+				left: 40vw
+
+		&--10
+			display: none
+
+			@media (min-width: 992px)
+				display: inline-block
+				top: 43%
+				left: 19vw

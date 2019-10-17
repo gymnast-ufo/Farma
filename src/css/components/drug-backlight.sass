@@ -1,0 +1,37 @@
+.drug-backlight
+	display: inline-flex
+	flex-flow: row nowrap
+	height: 400px
+	width: 100%
+	border-radius: 50%
+
+	&__gradient
+		background-image: radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255), transparent)
+		opacity: 0.2
+
+	&__rounded
+		width: 50%
+		border-radius: 50%
+		background-color: #40b3e7
+		opacity: 0.6
+
+		&:before,
+		&:after
+			content: ''
+			display: inline-flex
+			flex-flow: row nowrap
+			position: absolute
+			border-radius: inherit
+			background-color: inherit
+
+		&:before
+			width: 120%
+			height: 120%
+			transform: translate(-8.5%, -8.5%)
+			opacity: 0.3
+
+		&:after
+			width: 140%
+			height: 140%
+			transform: translate(-14%, -14%)
+			opacity: 0.2

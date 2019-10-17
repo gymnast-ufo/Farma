@@ -1,0 +1,164 @@
+@import './components/animations';
+@import './components/headers';
+@import './components/flex-row';
+@import './components/menu';
+@import './components/logo';
+@import './components/burger';
+@import './components/form';
+@import './components/placeholder';
+@import './components/inputs';
+@import './components/button';
+@import './components/faq-link';
+@import './components/list';
+@import './components/profile';
+@import './components/dots';
+@import './components/accordeon';
+@import './components/curved-block';
+@import './components/big-bird';
+@import './components/bird-ground';
+@import './components/hole-bird';
+@import './components/birds-slider';
+@import './components/slider-item';
+@import './components/target';
+@import './components/scheme';
+@import './components/pagination';
+@import './components/drug-backlight';
+@import './components/cation-text';
+@import './components/popup';
+@import './components/microbes';
+
+html, body
+	font-family: 'Roboto', 'Arial', sans-serif
+
+.wrap
+	position: relative
+	top: 0
+	transition: top 0.3s ease-out
+	overflow: hidden
+
+.container
+	padding-left: 12px
+	padding-right: 12px
+
+	@media (max-width: 767px)
+		width: 100%
+
+	@media (min-width: 768px)
+		width: auto
+
+	@media (min-width: 992px)
+		width: 970px
+
+	@media (min-width: 1200px)
+		width: 1170px
+
+	@media (min-width: 1250px)
+		width: 1248px
+
+.row
+	margin-left: -12px
+	margin-right: -12px
+
+	@media (min-width: 992px)
+		margin-left: -15px
+		margin-right: -15px
+
+.col-xs-12
+	padding-left: 12px
+	padding-right: 12px
+
+	@media (min-width: 992px)
+		padding-left: 15px
+		padding-right: 15px
+
+.overflow
+	height: 100%
+	overflow: hidden
+
+.fixed
+	position: fixed
+
+.light-block
+	color: #243269
+	background-color: #ffffff
+
+	& a
+		color: #243269
+
+	.list-item:before
+		background-color: #243269
+
+.dark-block
+	color: #ffffff
+	background-color: #204a8f
+
+	& a
+		color: #ffffff
+
+.gradient-block
+	background-image: radial-gradient(circle at 10% 50%, #40b3e7 0%, #2d58a0 50%)
+
+.required
+	text-align: right
+
+.mobile-link
+	cursor: pointer
+
+	@media (min-width: 992px)
+		cursor: text
+
+.text-shadow
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.4)
+
+.shadow
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)
+
+.shadow-big
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.24)
+
+.smaller
+	font-size: 0.8rem
+
+.footnote
+	display: inline
+	margin-inline-start: 3px
+	font-size: 0.8rem
+
+	@media (min-width: 992px)
+		font-size: 0.5rem
+
+.text--sup
+	vertical-align: super
+
+.text--sub
+	vertical-align: sub
+
+.semi-bold
+	font-weight: 500
+
+.bold
+	font-weight: bold
+
+.italic
+	font-style: italic
+
+.incorrect-value
+	color: #ff0000 !important
+	border-color: #ff0000 !important
+
+	& + label
+		color: #ff0000 !important
+
+		&:before
+			border-color: #ff0000
+
+.showing
+	transition: max-height 0.3s ease-out
+	overflow: hidden
+
+dl
+	margin-bottom: 0
+
+dt, dd
+	display: inline
+

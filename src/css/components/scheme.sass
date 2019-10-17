@@ -1,0 +1,32 @@
+.scheme
+	display: flex
+	flex-flow: row nowrap
+	margin: 0
+	overflow: visible
+
+	&__wrapper
+		display: flex
+		flex-flow: row nowrap
+
+	&__item
+		display: inline-flex
+		flex-flow: column nowrap
+		height: auto
+		width: 90%
+		padding: 24px
+		position: relative
+		background-color: #2d58a0
+		box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2)
+	
+		&:first-child
+			margin-left: 0
+
+		@media (min-width: 992px)
+			width: calc(33% - 12px) !important
+			margin-left: 24px
+			padding: 28px
+
+		&__header
+			margin-bottom: 14px
+
+		&__body

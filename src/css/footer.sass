@@ -1,0 +1,64 @@
+.footer
+	display: flex
+	flex-flow: column nowrap
+	position: relative
+	font-size: 12px
+	color: #e6e6e6
+
+	a
+		color: inherit
+
+	&__cation-text
+
+		@media (min-width: 992px)
+			margin-bottom: -1.85vw
+
+	&-body
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		position: relative
+		padding-top: 40px
+		padding-bottom: 30px
+		background-color: #63666a
+
+		@media (min-width: 992px)
+			grid-row-gap: 40px
+			padding-bottom: 14px
+	
+	&__logo
+		display: grid
+		position: relative
+		margin-bottom: 24px
+
+	&__text
+		margin-bottom: 24px
+		font-size: 1.1em
+
+	&__menu
+		display: flex
+		flex-flow: row wrap
+		padding: 0
+
+		&__item
+			list-style: none
+			margin-bottom: 1rem
+			margin-right: 20px
+			padding-right: 20px
+			border-width: 0 1px 0 0
+			border-style: solid 
+			border-color: #e6e6e6
+
+			@media (min-width: 992px)
+				margin-bottom: 0
+
+			&:first-child
+				border-left: 0
+			
+			&:last-child
+				margin-right: 0
+				padding-right: 0
+				border-right: 0
+
+			&-link
+				text-decoration: underline

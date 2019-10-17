@@ -1,0 +1,64 @@
+.galitose
+	display: flex
+	flex-flow: column nowrap
+	margin-top: 30px
+	margin-bottom: 40px
+
+	@media (min-width: 992px)
+		margin-top: 80px
+		margin-bottom: 80px
+
+	&__description-list
+		margin-bottom: 10px
+
+		@media (min-width: 992px)
+			margin-bottom: 30px
+	
+	&__selected
+		font-weight: 600
+		font-size: 1.2rem
+		color: #40b3e7
+		margin-bottom: 40px
+
+	&__drug
+		display: flex
+		flex-flow: row nowrap
+		justify-content: center
+		position: relative
+		margin-top: 10vw
+		margin-bottom: 10vw
+
+		@media (min-width: 992px)
+			align-items: center
+			height: 100%
+			margin-top: 1vw
+			margin-bottom: 0
+
+		&-row
+			display: flex
+			flex-flow: column nowrap
+			align-items: stretch
+
+			@media (min-width: 992px)
+				flex-direction: row
+
+		&__backlight
+			width: 43%
+			position: relative
+
+			@media (min-width: 992px)
+				width: 60%
+
+		&-image
+			width: 70%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -34%)
+
+			@media (min-width: 992px)
+				width: 100%
+
+	&__notify
+		margin-top: 10px
+		opacity: 0.8

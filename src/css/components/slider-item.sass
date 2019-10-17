@@ -1,0 +1,101 @@
+.slider-item
+	display: inline-flex
+	flex-flow: column nowrap
+	align-items: center
+	transform-origin: 50% 0
+
+	&:first-child
+		transform-origin: 0 0
+
+	&:last-child
+		transform-origin: 100% 0
+
+	@media(min-width: 992px)
+		margin-top: 30px
+		transform: scale(0.85)
+
+	&__bird
+		display: inline-flex
+		flex-flow: column nowrap
+		align-items: center
+		position: relative
+		height: 230px
+		width: 100%
+		margin-bottom: 64px
+
+		@media (min-width: 992px)
+			height: auto
+			margin-bottom: 74px
+
+		&__ground
+
+			@media (max-width: 992px)
+				bottom: -30%
+				width: 40%
+
+			@media (min-width: 992px)
+				transform: rotateX(77deg) translate3d(-50%, -50%, -32px) scale(0.9)
+
+	&__description
+		display: inline-flex
+		flex-flow: row nowrap
+		justify-content: center
+		width: 100%
+		transform-origin: 50% 0
+
+		@media(min-width: 992px)
+			transform: scale(1.2)
+
+		&__title
+			margin-bottom: 10px
+			font-size: 16px
+
+		&__subtitle
+			color: #243c69
+			font-size: 1rem
+			line-height: 1.33
+			opacity: 0.6
+
+			@media (min-width: 992px)
+				font-size: 0.9rem
+				line-height: 1.14
+
+		&--wrapper
+			display: inline-flex
+			flex-flow: column nowrap
+			max-width: 232px
+			text-align: center
+
+		&--button
+			display: none
+			flex-flow: row nowrap
+			justify-content: center
+			align-items: center
+			margin-left: 45px
+			font-size: 18px
+
+			@media (min-width: 992px)
+				display: inline-flex
+
+.big-slider
+
+	@media (min-width: 992px)
+		margin-top: 0
+		transform: scale(1.5)
+
+	.slider-item
+
+		&__bird
+
+			@media (min-width: 992px)
+				margin-bottom: 54px
+
+		&__description
+
+			@media (min-width: 992px)
+				transform: scale(0.65)
+
+	.bird-ground
+
+		@media (min-width: 992px)
+			transform: rotateX(77deg) translate3d(-50%, -50%, -32px) scale(0.72)

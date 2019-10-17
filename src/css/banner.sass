@@ -1,0 +1,99 @@
+.banner
+	display: flex
+	flex-flow: column nowrap
+	width: 100%
+	position: relative
+	background-image: linear-gradient(to bottom, #0063a3, #96defc)
+	padding-top: 13vh
+
+	@media (min-width: 992px)
+		padding-top: 20vh
+
+	&__entry
+		display: flex
+		flex-flow: column nowrap
+		justify-content: flex-start
+		align-items: flex-start
+
+		&__element
+			display: flex
+			flex-flow: row nowrap
+			justify-content: flex-start
+			align-items: center
+			position: relative
+			margin-bottom: 1.4rem
+			color: inherit
+
+			@media (min-width: 768px)
+				margin-bottom: 2rem
+
+		&__main-header
+			margin-bottom: inherit
+
+			@media (min-width: 992px)
+				margin-bottom: 8px
+
+		&__slogan
+			width: 65%
+			font-size: 1rem
+			line-height: 1.56
+
+			@media (min-width: 768px)
+				width: 100%
+				font-size: 1.2rem
+				line-height: 1.4
+
+		&__buy-button
+			
+			@media (max-width: 991px)
+				margin-bottom: 20px
+
+	&__main-image
+		display: flex
+		flex-flow: row nowrap
+		margin-top: 13%
+		
+		&__drug
+			flex-basis: 60%
+
+			@media (min-width: 992px)
+				flex-basis: 400px
+
+			&-image
+				width: 100%
+
+		&__bird
+			flex-basis: 45%
+			display: inline-flex
+			flex-flow: column nowrap
+			align-items: center
+			justify-content: center
+			width: 100%
+			position: relative
+			left: -3%
+
+			@media (min-width: 992px)
+				flex: 8
+
+			@media (min-width: 1200px)
+				margin-left: -120px
+
+			&__main
+				top: -10%
+
+				@media (min-width: 992px)
+					top: -26%
+					left: -12px
+				
+			&__ground
+
+	&__cation-text
+
+	&__bottom
+		display: flex
+		flex-flow: column nowrap
+		position: relative
+		margin-top: 30px
+
+		@media (min-width: 992px)
+			margin-top: 12px

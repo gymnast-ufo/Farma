@@ -1,0 +1,24 @@
+.big-bird
+	display: flex
+	width: 100%
+	height: 100%
+	position: relative
+	background-size: contain
+	background-position: 50% 100%
+	background-repeat: no-repeat
+	z-index: 1
+
+	@media(min-width: 992px)
+		height: 343px
+
+	&__main
+		background-image: url('/build/img/bird--main.png')
+
+	&__doctor
+		background-image: url('/build/img/bird--doctor.png')
+
+	&__dantist
+		background-image: url('/build/img/bird--dantist.png')
+
+	&__doctor-with-drug
+		background-image: url('/build/img/bird--doctor-with-drug.png')

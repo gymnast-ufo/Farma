@@ -1,0 +1,53 @@
+.accordeon
+
+	&__item
+		border-bottom: solid 1px #e2e2e2
+
+		&__panel
+			display: block
+			position: relative
+			padding: 32px
+			padding-right: 50px
+			font-size: 16px
+			color: #40b3e7
+			cursor: pointer
+			z-index: 1
+
+			@media (min-width: 992px)
+				font-size: 18px
+
+			&:after
+				content: ''
+				display: inline-flex
+				width: 16px
+				height: 16px
+				position: absolute
+				top: 50%
+				right: 20px
+				border-width: 2px 2px 0px 0px
+				border-style: solid
+				border-color: #91c03c
+				transform: translateY(-50%) rotate(135deg)
+				transition: transform 0.3s ease-out
+
+			&--mobile
+
+				&:after
+
+					@media (min-width: 992px)
+						display: none
+
+			&--active
+
+				&:after
+					transform: translateY(-50%) rotate(-45deg)
+
+		&__collapse
+			padding-left: 32px
+			padding-right: 32px
+			overflow: hidden
+			transition: max-height 0.3s ease-out
+			
+			p
+				margin-bottom: 37px
+

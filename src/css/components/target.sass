@@ -1,0 +1,47 @@
+.target
+	display: grid
+	grid-template-columns: 66px auto
+	grid-template-rows: 1fr
+	grid-column-gap: 24px
+	align-items: center
+	position: relative
+
+	@media (min-width: 992px)
+		font-size: 20px
+
+	&-icon
+		display: inline-flex
+		flex-flow: row nowrap
+		width: 66px
+		height: 66px
+		margin-right: 24px
+		position: relative
+		border-radius: 50%
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+
+		@media (min-width: 992px)
+			width: 80px
+			height: 80px
+
+	&--child
+		&-icon
+			background-image: url('/build/img/Icon-baby.svg')
+
+	&--teenager
+		&-icon
+			background-image: url('/build/img/Icon-teenage.svg')
+
+	&--adult
+		&-icon
+			background-image: url('/build/img/Icon-adult.svg')
+
+	&--elderly
+		&-icon
+			background-image: url('/build/img/Icon-old.svg')
+	
+	&-text
+		display: inline-flex
+		flex-flow: row nowrap
+		align-items: center

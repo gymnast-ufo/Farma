@@ -1,0 +1,46 @@
+.dot
+	display: inline-block
+	position: relative
+	border-radius: 50%
+	background-color: #0551ab
+	z-index: 1
+	
+	&--small
+		width: 12px
+		height: 12px
+
+	&--big
+		width: 24px
+		height: 24px
+
+	&--big-border
+		&--animate
+
+			&:before, &:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 50%
+				left: 50%
+				background-color: inherit
+				border-radius: inherit
+				transform: translate(-50%, -50%)
+				transform-origin: 50% 50%
+
+			&:before
+				width: 34px
+				height: 34px
+				animation: pulsingDotBefore 2.5s ease-out infinite
+				opacity: 0.5
+
+			&:after
+				width: 62px
+				height: 62px
+				animation: pulsingDotAfter 2.5s ease-out infinite
+				opacity: 0.2
+	
+	&--left
+		transform: translate(-50%, -50%)
+
+	&--right
+		transform: translate(50%, -50%)
